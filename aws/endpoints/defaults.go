@@ -21953,13 +21953,16 @@ var awscnPartition = partition{
 			},
 		},
 		"sts": service{
+			PartitionEndpoint: "aws-cn-global",
 			Endpoints: serviceEndpoints{
 				endpointKey{
-					Region: "cn-north-1",
-				}: endpoint{},
-				endpointKey{
-					Region: "cn-northwest-1",
-				}: endpoint{},
+					Region: "aws-cn-global",
+				}: endpoint{
+					Hostname: "sts.cn-northwest-1.amazonaws.com.cn",
+					CredentialScope: credentialScope{
+						Region: "cn-northwest-1",
+					},
+				},
 			},
 		},
 		"support": service{
